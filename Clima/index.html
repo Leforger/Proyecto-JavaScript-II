@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Clima</title>
+    <center><img src="clima.png" /></center>
+    <style>
+
+        body {
+            background-image: linear-gradient( rgba(222, 226, 235, 0.75), rgb(222, 226, 235, 0.60)), url(Campo_abierto.jpg);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            opacity: 1; 
+        }
+
+        img {
+            width: 350px;
+            height: 225px;
+            align-content: center;
+        }
+
+        label {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-weight: 100;
+            
+        }
+
+        h1{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin-top: 15px;
+        }
+
+        table {
+          border-collapse: collapse;
+          text-align: center;
+        }
+
+        th {
+          border: 1px solid black;
+          padding: 8px;
+          text-align: left;
+          background-color: #36437C;
+          color: white;
+          font-size: larger;
+          font-family: Georgia, 'Times New Roman', Times, serif;
+          width: 250px;
+          text-align: center;
+        }
+
+        td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+            background-color: #D0D8F8;
+            color: black;
+            text-align: center;
+        }
+        
+        input {
+            width: 550px;
+            height: 25px;
+            text-align: center;
+            justify-content: center;
+        }
+
+        button {
+            width: 150px;
+            height: 30px;
+            font-size: large;
+        }
+    </style>
+
+</head>
+<center>
+<body>
+
+    <h1>¡Consulte el clima actual en la ciudad de su preferencia!</h1>
+
+    <div>
+        <label for="ciudad"><strong>Ciudad o País:</strong></label>
+    </div>
+
+    <div>
+        <input type="text" id="ciudad" placeholder="Esciba la ciudad o el país del cual desea saber el clima actual">
+        <button onclick="consultarClima()">Consultar</button>
+    </div>
+    <br>
+    
+    <div>
+        <label for="ciudades"><strong>Ciudades o Países</strong></label>
+    </div>
+
+        <div>
+            <input type="text" id="ciudades"  placeholder="Esciba las ciudades/países separados por una coma. P.ej: México, Aguascalientes, Yucatán">
+            <button onclick="consultarClimas()">Consultar</button>
+        </div>
+        <br>
+
+        <div> 
+            <button onclick="limpiarTabla()">Limpiar tabla</button>
+        </div>
+
+        <br>
+        <div>
+            <table id="tabla-clima">
+                <thead>
+                    <tr>
+                        <th>Ciudad</th>
+                        <th>Temperatura</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+            <tbody>
+            </tbody>
+            </table>
+        </div>
+        
+        <script src="script.js"></script>
+        </body>
+        </html>
+        
+</body>
+</center>
+</html>
